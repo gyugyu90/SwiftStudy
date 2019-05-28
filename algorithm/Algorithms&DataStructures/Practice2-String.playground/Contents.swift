@@ -18,7 +18,7 @@ fileprivate func getIntersection(arr1 : [Character], arr2 : [Character]) -> [Cha
     for elem in arr1 {
         if _arr2.contains(elem) {
             resultArray.append(elem)
-            _arr2.remove(at: _arr2.index(of: elem)!)
+            _arr2.remove(at: _arr2.firstIndex(of: elem)!)
         }
     }
     return resultArray

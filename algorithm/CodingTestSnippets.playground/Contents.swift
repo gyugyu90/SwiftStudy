@@ -91,12 +91,12 @@ fileprivate func getIntersectionOfArrays(arr1 : [String], arr2 : [String]) -> [S
 
 // 배열의 합집합 구하기
 fileprivate func getUnionOfArrays(arr1 : [String], arr2 : [String]) -> [String] {
-    var intersection = getIntersectionOfArrays(arr1: arr1, arr2: arr2)
+    let intersection = getIntersectionOfArrays(arr1: arr1, arr2: arr2)
     var arr1PlusArr2 = arr1 + arr2
     
     for elem in intersection {
         if arr1PlusArr2.contains(elem) {
-            arr1PlusArr2.remove(at: arr1PlusArr2.index(of: elem)!)
+            arr1PlusArr2.remove(at: arr1PlusArr2.firstIndex(of: elem)!)
         }
     }
     
